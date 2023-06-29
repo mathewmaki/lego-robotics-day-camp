@@ -1,0 +1,14 @@
+site_name: LEGO Python Robotics Docs
+
+theme:
+  name: "material"
+
+plugins:
+  - mkdocstrings
+
+extra_css:
+  [css/extra.css]
+
+nav:
+  - Python Documentation: index.md
+  - Code Examples: examples.md

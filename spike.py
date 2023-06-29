@@ -150,7 +150,7 @@ class DistanceSensor:
         RuntimeError : The sensor has been disconnected from the Port.
         """
         pass
-    def get_distance_cm(self, short_range=False) -> float:
+    def get_distance_cm(self, short_range=False):
         """
         Retrieves the measured distance in centimeters.
         
@@ -179,7 +179,7 @@ class DistanceSensor:
         RuntimeError :  The sensor has been disconnected from the Port.
         """
         pass
-    def get_distance_inches(self, short_range=False) -> float:
+    def get_distance_inches(self, short_range=False):
         """
         Gets the measured distance in inches.
         
@@ -209,7 +209,7 @@ class DistanceSensor:
         """
         pass
     
-    def get_distance_percentage(self, short_range=False) -> int:
+    def get_distance_percentage(self, short_range=False):
         """
         Retrieves the measured distance in percent.
         
@@ -332,7 +332,7 @@ class ForceSensor:
         Default : no default value
         """
         pass
-    def is_pressed(self) -> bool:
+    def is_pressed(self):
         """
         Tests whether the button on the sensor is pressed.
         
@@ -349,7 +349,7 @@ class ForceSensor:
         RuntimeError : The Force Sensor has been disconnected from the port.
         """
         pass
-    def get_force_newton(self) -> float:
+    def get_force_newton(self):
         """
         Retrieves the measured force, in newtons.
         
@@ -366,7 +366,7 @@ class ForceSensor:
         RuntimeError : The Force Sensor has been disconnected from the port.
         """
         pass
-    def get_force_percentage(self) -> int:
+    def get_force_percentage(self):
         """
         Retrieves the measured force as a percentage of the maximum force.
         
@@ -506,7 +506,7 @@ class MotionSensor:
         Sets the yaw angle to 0.
         """
         pass
-    def get_yaw_angle(self) -> int:
+    def get_yaw_angle(self):
         """
         Retrieves the yaw angle of the Hub.
         
@@ -521,7 +521,7 @@ class MotionSensor:
         Values : -180 to 180 BUG: in 1.2 the values are -179 to 179
         """
         pass
-    def get_orientation(self) -> str:
+    def get_orientation(self):
         """
         Retrieves the current orientation of the Hub.
         Returns
@@ -533,7 +533,7 @@ class MotionSensor:
         Values : 'front','back','up','down','leftside','rightside'
         """
         pass
-    def get_gesture(self) -> str:
+    def get_gesture(self):
         """
         Retrieves the most recently-detected gesture.
         Returns
@@ -545,7 +545,7 @@ class MotionSensor:
         Values : 'shaken','tapped','doubletapped','falling'
         """
         pass
-    def get_roll_angle(self) -> int:
+    def get_roll_angle(self):
         """
         Retrieves the roll angle of the Hub.
         "Roll" is the rotation around the front-back (longitudinal) axis. "Yaw" is the rotation around the front-back (vertical) axis. "Pitch" is the rotation around the left-right (transverse) axis.
@@ -558,7 +558,7 @@ class MotionSensor:
         Values : -180 to 180 BUG: currently returns -179 to 179
         """
         pass
-    def get_pitch_angle(self) -> int:
+    def get_pitch_angle(self):
         """
         Retrieves the pitch angle of the Hub.
         "Pitch" is the rotation around the left-right (transverse) axis. "Roll" is the rotation around the front-back (longitudinal) axis. "Yaw" is the rotation around the front-back (vertical) axis.
@@ -569,7 +569,7 @@ class MotionSensor:
         Values : -180 to 180 BUG: only reads -90 to 90
         """
         pass
-    def was_gesture(self, gesture) -> bool:
+    def was_gesture(self, gesture):
         """
         Tests whether a gesture has occurred since the last time was_gesture() was used or since the beginning of the program (for the first use).
         Parameters
@@ -597,7 +597,7 @@ class MotionSensor:
         Values : True or False
         """
         pass
-    def wait_for_new_gesture(self) -> str:
+    def wait_for_new_gesture(self):
         """
         Waits until a new gesture happens.
         Returns
@@ -607,7 +607,7 @@ class MotionSensor:
         Values : 'shaken','tapped','doubletapped','falling'
         """
         pass
-    def wait_for_new_orientation(self) -> str:
+    def wait_for_new_orientation(self):
         """
         Waits until the orientation of the Hub changes.
         The first time this method is called, it will immediately return the current value. After that, calling this method will block the program until the Hub's orientation has changed since the previous time this method was called.
@@ -845,7 +845,7 @@ class Motor:
         RuntimeError : The motor has been disconnected from the Port.
         """
         pass
-    def get_speed(self) -> int:
+    def get_speed(self):
         """
         Retrieves the speed of the motor.
         
@@ -862,7 +862,7 @@ class Motor:
         RuntimeError : The motor has been disconnected from the Port.
         """
         pass
-    def get_position(self) -> int:
+    def get_position(self):
         """
         Retrieves the position of the motor. This is the clockwise angle between the moving marker and the zero-point marker on the motor.
         
@@ -879,7 +879,7 @@ class Motor:
         RuntimeError : The motor has been disconnected from the Port.
         """
         pass
-    def get_degrees_counted(self) -> int:
+    def get_degrees_counted(self):
         """
         Retrieves the degrees counted by the motor.
         
@@ -896,7 +896,7 @@ class Motor:
         RuntimeError : The motor has been disconnected from the Port.
         """
         pass
-    def get_default_speed(self) -> int:
+    def get_default_speed(self):
         """
         Retrieves the current default motor speed.
 
@@ -913,7 +913,7 @@ class Motor:
         RuntimeError : The motor has been disconnected from the Port.
         """
         pass
-    def was_interrupted(self) -> bool:
+    def was_interrupted(self):
         """
         Tests whether the motor was interrupted.
         
@@ -930,7 +930,7 @@ class Motor:
         RuntimeError : The motor has been disconnected from the Port.
         """
         pass
-    def was_stalled(self) -> bool:
+    def was_stalled(self):
         """
         Tests whether the motor was stalled.
         
@@ -1317,7 +1317,7 @@ class MotorPair:
         RuntimeError : One or both of the Ports do not have a motor connected or the motors could not be paired.
         """
         pass
-    def get_default_speed(self) -> int:
+    def get_default_speed(self):
         """
         Retrieves the default motor speed.
         
@@ -1481,7 +1481,7 @@ class Speaker:
         Stops any sound that is playing.
         """
         pass
-    def get_volume(self) -> int:
+    def get_volume(self):
         """
         Retrieves the value of the speaker volume.
         This only retrieves the volume for the Hub and not the programming app.
@@ -1549,7 +1549,96 @@ class StatusLight:
         """
         pass
 
-class Button:
+def wait_for_seconds(seconds):
+    """
+    Waits for a specified number of seconds before continuing the program.
+    
+    Parameters
+    --------------
+    seconds : The time to wait in seconds.
+    
+    Type : float (decimal value)
+    
+    Values : any value
+    
+    Default : no default value
+    
+    Errors
+    ----------------
+    TypeError : seconds is not a number.
+    
+    ValueError : seconds is not at least 0.
+    """
+    pass
+def wait_until(get_value_function, operator_function, target_value=True):
+    """
+    Waits until the condition is True before continuing with the program.
+    
+    Parameters
+    --------------
+    get_value_function
+    
+    Type : callable function
+    
+    Values : A function that returns the current value to be compared to the target value.
+    
+    Default : no default value
+    
+    operator_function
+    
+    Type : callable function
+    
+    Values : A function that compares two arguments. The first argument will be the result of get_value_function() and the second argument will be target_value. The function will compare these two values and return the result.
+    
+    Default : no default value
+    
+    target_value
+    
+    Type : any type
+    
+    Values : Any object that can be compared by operator_function.
+    
+    Default : no default value
+    
+    Errors
+    ----------------
+    TypeError : get_value_function or operator_function is not callable or operator_function does not compare two arguments.
+    """
+    pass
+
+def greater_than(a, b):
+    """
+    Tests whether value a is greater than value b.
+    This is the same as a > b.
+    
+    Parameters
+    ---------
+    a : Any object that can be compared to b.
+    
+    Type : any type
+    
+    Values : any value
+    
+    Default : no default value
+    
+    b : Any object that can be compared to a.
+    
+    Type : any type
+    
+    Values : any value
+    
+    Default : no default value
+    
+    Returns
+    ---------
+    Type : boolean
+    
+    Values : True if a > b, otherwise False.
+    """
+    pass
+
+
+class Buttons:
     def __init__(self, location):
         """
         Accesses the PrimeHub buttons
@@ -1565,7 +1654,7 @@ class Button:
         Waits until the button is released.
         """
         pass
-    def was_pressed(self) -> bool:
+    def was_pressed(self):
         """
         Tests to see whether the button has been pressed since the last time this method called.
         Once this method returns True, the button must be released and pressed again before this method will return True again.
@@ -1576,7 +1665,7 @@ class Button:
         Values : True or False
         """
         pass
-    def is_pressed(self) -> bool:
+    def is_pressed(self):
         """
         Tests whether the button is pressed.
         Returns
@@ -1604,7 +1693,7 @@ class ColorSensor:
         Default : no default value
         """
         pass
-        def get_color(self) -> str:
+        def get_color(self):
             """
             Retrieves the detected color of a surface.
             
@@ -1621,7 +1710,7 @@ class ColorSensor:
             RuntimeError : The sensor has been disconnected from the Port.
             """
         pass
-    def get_ambient_light(self) -> int:
+    def get_ambient_light(self):
         """
         Retrieves the intensity of the ambient light.
         This causes the Color Sensor to change modes, which can affect your program in unexpected ways. For example, when the Color Sensor is in ambient light mode, it cannot read colors.
@@ -1639,7 +1728,7 @@ class ColorSensor:
         RuntimeError : The sensor has been disconnected from the Port.
         """
         pass
-    def get_reflected_light(self) -> int:
+    def get_reflected_light(self):
         """
         Retrieves the intensity of the reflected light.
         
@@ -1656,7 +1745,7 @@ class ColorSensor:
         RuntimeError : The sensor has been disconnected from the Port.
         """
         pass
-    def get_rgb_intensity(self) -> tuple:
+    def get_rgb_intensity(self):
         """
         Retrieves the red, green, blue, and overall color intensity.
         
@@ -1671,7 +1760,7 @@ class ColorSensor:
         RuntimeError : The sensor has been disconnected from the Port.
         """
         pass
-    def get_red(self) -> int:
+    def get_red(self):
         """
         Retrieves the red color intensity.
         
@@ -1686,7 +1775,7 @@ class ColorSensor:
         RuntimeError : The sensor has been disconnected from the Port.
         """
         pass
-    def get_green(self) -> int:
+    def get_green(self):
         """
         Retrieves the green color intensity.
         
@@ -1701,7 +1790,7 @@ class ColorSensor:
         RuntimeError : The sensor has been disconnected from the Port.
         """
         pass
-    def get_blue(self) -> int:
+    def get_blue(self):
         """
         Retrieves the blue color intensity.
         
@@ -1821,8 +1910,8 @@ class ColorSensor:
 class PrimeHub:
     speaker = Speaker()
     motion_sensor = MotionSensor()
-    left_button = Button("left")
-    right_button = Button("right")
+    left_button = Buttons("left")
+    right_button = Buttons("right")
     light_matrix = LightMatrix()
     status_light = StatusLight()
     PORT_A = 'A'
