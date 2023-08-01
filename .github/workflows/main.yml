@@ -15,4 +15,9 @@ jobs:
         run: |
           pip install mkdocs
           pip install mkdocs-material
-          pip install mkdocstrings 
+          pip install mkdocstrings
+      
+      - name: Build and Deploy Mkdocs
+        run: |
+          mkdocs build
+          mkdocs gh-deploy --force --clean --verbose
