@@ -12,3 +12,6 @@ extra_css:
 nav:
   - Python Documentation: index.md
   - Code Examples: examples.md
+
+docs_dir: docs
+site_dir: ../lego-robotics-day-camp-gh-pages
