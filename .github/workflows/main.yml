@@ -10,6 +10,10 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-python@v2
         with:
-          python-version: 3.x
-      - run: pip install mkdocs
+          python-version: 3.8
+      - name: Install MkDocs and required plugins
+        run: |
+          pip install mkdocs
+          pip install mkdocs-material  # Install the material theme
+          pip install mkdocstrings    # Install the mkdocstrings plugin
       - run: mkdocs gh-deploy --force --clean --verbose
