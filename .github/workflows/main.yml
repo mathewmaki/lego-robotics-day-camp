@@ -14,6 +14,5 @@ jobs:
       - name: Install MkDocs and required plugins
         run: |
           pip install mkdocs
-          pip install mkdocs-material  # Install the material theme
-          pip install mkdocstrings    # Install the mkdocstrings plugin
-      - run: mkdocs gh-deploy --force --clean --verbose
+          pip install mkdocs-material
+          pip install mkdocstrings 
