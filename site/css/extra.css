@@ -1,0 +1,20 @@
+.md-header__inner.md-grid {
+	background-color: rgb(43, 131, 182);
+}
+.md-header.md-header--shadow {
+	background-color: rgb(43, 131, 182);
+}
+h1 {
+	color: black;
+	font-weight: 700;
+}
+h2 {
+	color: rgb(43, 131, 182);
+	font-weight: 700;
+}
+ul {
+	font-weight: 700;
+}
+.md-nav__title {
+	color:rgb(43, 131, 182);
+}
