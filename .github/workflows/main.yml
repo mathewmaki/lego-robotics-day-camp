@@ -20,5 +20,5 @@ jobs:
       
       - name: Build and Deploy Mkdocs
         run: |
-          mkdocs build
-          mkdocs gh-deploy
+          mkdocs build --clean
+          mkdocs gh-deploy --force --verbose
