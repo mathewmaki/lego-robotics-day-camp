@@ -6,8 +6,7 @@ on:
 permissions:
   contents: read
   pages: write
-  id-token: write
-  
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -15,33 +14,35 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout code
+        uses: actions/checkout@v2
+
       - name: Configure Git
         run: |
           git config --global user.name "mathewmaki"
           git config --global user.email "mathewmaki2002@gmail.com"
           git remote set-url origin "git@github.com:${{ github.repository }}.git"
-          echo -e "Host github.com\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
-          
+
           mkdir -p /home/runner/.ssh
           echo -e "Host github.com\n\tStrictHostKeyChecking no\n" > /home/runner/.ssh/config
           chmod 600 /home/runner/.ssh/config
-          
+
       - uses: actions/setup-python@v2
         with:
           python-version: 3.8
+
       - name: Install MkDocs and required plugins
         run: |
           pip install mkdocs
           pip install mkdocs-material
           pip install mkdocstrings
           pip install "mkdocstrings[python]"
-      
+
       - name: Build and Deploy Mkdocs
         run: |
           mkdocs build --clean
           mkdocs gh-deploy --force --verbose
-          
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
