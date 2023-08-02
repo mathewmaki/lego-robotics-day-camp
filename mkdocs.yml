@@ -1,4 +1,5 @@
 site_name: LEGO Python Robotics Docs
+site_url: http://mathewmaki.github.io/lego-robotics-day-camp/
 
 theme:
   name: "material"
