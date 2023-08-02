@@ -25,6 +25,12 @@ jobs:
           pip install mkdocs-material
           pip install mkdocstrings
           pip install "mkdocstrings[python]"
+      - name: Configure Git
+        run: |
+          git config --global user.name "mathewmaki"
+          git config --global user.email "mathewmaki2002@gmail.com"
+          git remote set-url origin "git@github.com:${{ github.repository }}.git"
+          echo -e "machine github.com\n  login ${{ secrets.GH_TOKEN }}" > ~/.netrc
 
       
       - name: Build and Deploy Mkdocs
