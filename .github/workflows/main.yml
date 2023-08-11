@@ -26,4 +26,10 @@ jobs:
           pip install mkdocstrings
           pip install "mkdocstrings[python]"
           mkdocs build
-          mkdocs gh-deploy --force
+          mv site/* $GITHUB_WORKSPACE
+          rm -rf site
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Deploy MkDocs site"
+          git push origin main
