@@ -25,4 +25,5 @@ jobs:
           pip install mkdocs-material
           pip install mkdocstrings
           pip install "mkdocstrings[python]"
+          mkdocs build
           mkdocs gh-deploy --force
