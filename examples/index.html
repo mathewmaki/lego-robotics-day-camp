@@ -1,0 +1,630 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="http://mathewmaki.github.io/lego-robotics-day-camp/examples/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.1.21">
+    
+    
+      
+        <title>Code Examples - LEGO Python Robotics Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.eebd395e.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+      <link rel="stylesheet" href="../css/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#code-examples" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="LEGO Python Robotics Docs" class="md-header__button md-logo" aria-label="LEGO Python Robotics Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            LEGO Python Robotics Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Code Examples
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="LEGO Python Robotics Docs" class="md-nav__button md-logo" aria-label="LEGO Python Robotics Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    LEGO Python Robotics Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Python Documentation
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Code Examples
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Code Examples
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sounds" class="md-nav__link">
+    Sounds
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#light-matrix" class="md-nav__link">
+    Light Matrix
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status-light" class="md-nav__link">
+    Status Light
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motion-sensor" class="md-nav__link">
+    Motion Sensor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#color-sensor" class="md-nav__link">
+    Color Sensor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#force-sensor" class="md-nav__link">
+    Force Sensor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distance-sensor" class="md-nav__link">
+    Distance Sensor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#single-motor" class="md-nav__link">
+    Single Motor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motor-pairs" class="md-nav__link">
+    Motor Pairs
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sounds" class="md-nav__link">
+    Sounds
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#light-matrix" class="md-nav__link">
+    Light Matrix
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#status-light" class="md-nav__link">
+    Status Light
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motion-sensor" class="md-nav__link">
+    Motion Sensor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#color-sensor" class="md-nav__link">
+    Color Sensor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#force-sensor" class="md-nav__link">
+    Force Sensor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distance-sensor" class="md-nav__link">
+    Distance Sensor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#single-motor" class="md-nav__link">
+    Single Motor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#motor-pairs" class="md-nav__link">
+    Motor Pairs
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+<h1 id="code-examples">Code Examples</h1>
+<p>Here are a few code examples :)</p>
+<h2 id="sounds">Sounds</h2>
+<pre><code class="language-python"># Initalize hub
+hub = PrimeHub()
+
+# Start beeping at note 60
+hub.speaker.start_beep(60)
+
+# Stop beeping after 3 seconds
+wait_for_seconds(3)
+hub.speaker.stop()
+</code></pre>
+<h2 id="light-matrix">Light Matrix</h2>
+<pre><code class="language-python"># Initalize hub
+hub = PrimeHub()
+
+# Show the XMAS image on the hub
+hub.light_matrix.show_image('XMAS')
+
+# Wait 2 seconds
+wait_for_seconds(2)
+
+# Write a message on the screen
+hub.light_matrix.write(&quot;Code Ninjas!&quot;)
+
+
+# Set pixels to make a striped pattern
+for y in range(0, 5, 2):
+    for x in range(5):
+        hub.light_matrix.set_pixel(x, y)
+
+# Wait for 2 seconds
+wait_for_seconds(2)
+
+# Turn off the light matrix
+hub.light_matrix.off()
+</code></pre>
+<p><a href="../#spike.LightMatrix.show_image--parameters">List of images</a></p>
+<h2 id="status-light">Status Light</h2>
+<pre><code class="language-python"># Initalize hub
+hub = PrimeHub()
+
+# List of status light colors
+colors = ['azure', 'black', 'blue', 'cyan', 'green', 'orange', 'pink', 'red', 'violet', 'yellow', 'white']
+
+# Cycle through all the colors
+for color in colors:
+    hub.status_light.on(color)
+    wait_for_seconds(1)
+
+# Turn off the status light
+hub.status_light.off()
+</code></pre>
+<h2 id="motion-sensor">Motion Sensor</h2>
+<pre><code class="language-python"># Initalize hub
+hub = PrimeHub()
+
+# Get a gesture from the hub's motion sensor
+gesture = hub.motion_sensor.wait_for_new_gesture()
+
+# Show a different image based on the type of gesture
+if gesture == 'shaken':
+    hub.light_matrix.show_image('HAPPY')
+elif gesture == 'tapped':
+    hub.light_matrix.show_image('MEH')
+elif gesture == 'doubletapped':
+    hub.light_matrix.show_image('SILLY')
+elif gesture == 'falling':
+    hub.light_matrix.show_image('SURPRISED')
+</code></pre>
+<h2 id="color-sensor">Color Sensor</h2>
+<pre><code class="language-python"># Initalize hub
+hub = PrimeHub()
+
+# Initialize the color sensor plugged into port A
+color_sensor = ColorSensor('A')
+
+# Get the color from the color sensor
+color = color_sensor.get_color()
+
+# Show a ghost if the color is blue
+if color == 'blue':
+    hub.light_matrix.show_image('GHOST')
+
+
+# Wait 2 seconds
+wait_for_seconds(2)
+
+# Make a spinning animation on the color sensor
+for i in range(10):
+    color_sensor.light_up(100, 0, 0)
+    wait_for_seconds(0.1)
+    color_sensor.light_up(0, 100, 0)
+    wait_for_seconds(0.1)
+    color_sensor.light_up(0, 0, 100)
+    wait_for_seconds(0.1)
+
+# Turn off the color sensor light
+color_sensor.light_up_all(0)
+</code></pre>
+<p><a href="../#spike.ColorSensor.wait_until_color--parameters">List of colors</a></p>
+<h2 id="force-sensor">Force Sensor</h2>
+<pre><code class="language-python"># Initalize hub
+hub = PrimeHub()
+
+# Initialize the force sensor plugged into port A
+button = ForceSensor('A')
+
+# Show a pacman when the button is pressed
+button.wait_until_pressed()
+hub.light_matrix.show_image('PACMAN')
+
+# Show a pitchfork when the button is released
+button.wait_until_released()
+hub.light_matrix.show_image('PITCHFORK')
+</code></pre>
+<h2 id="distance-sensor">Distance Sensor</h2>
+<pre><code class="language-python"># Initalize hub
+hub = PrimeHub()
+
+# Initialize the distance sensor plugged into port A
+distance_sensor = DistanceSensor('A')
+
+# Show a duck if the distance is greater than 20cm
+distance_sensor.wait_for_distance_farther_than(20, 'cm')
+hub.light_matrix.show_image('DUCK')
+
+# Make a light animation when the distance is closer than 20cm
+distance_sensor.wait_for_distance_closer_than(20, 'cm')
+hub.light_matrix.off()
+
+for i in range(10):
+    distance_sensor.light_up(100, 0, 0, 0)
+    wait_for_seconds(0.2)
+    distance_sensor.light_up(0, 100, 0, 0)
+    wait_for_seconds(0.2)
+    distance_sensor.light_up(0, 0, 100, 0)
+    wait_for_seconds(0.2)
+    distance_sensor.light_up(0, 0, 0, 100)
+    wait_for_seconds(0.2)
+
+# Turn off the lights
+distance_sensor.light_up_all(0)
+</code></pre>
+<h2 id="single-motor">Single Motor</h2>
+<pre><code class="language-python"># Initalize hub
+hub = PrimeHub()
+
+# Initialize the motor plugged into port A
+motor = Motor('A')
+
+# Set the motor to position 0
+motor.run_to_position(0)
+
+wait_for_seconds(2)
+
+# Start the motor at 100% speed
+motor.start(100)
+
+hub.light_matrix.write('Motor started')
+
+# Stop the motor and wait 2 seconds
+motor.stop()
+wait_for_seconds(2)
+
+# Set the motor speed to 75%
+motor.set_default_speed(75)
+
+# Run the motor for 2 rotations
+motor.run_for_rotations(2)
+
+wait_for_seconds(1)
+
+# Run the motor 90 degrees counter clockwise
+motor.run_for_degrees(-90)
+
+wait_for_seconds(2)
+
+# Run the motor for 2 seconds
+motor.run_for_seconds(2)
+</code></pre>
+<h2 id="motor-pairs">Motor Pairs</h2>
+<pre><code class="language-python"># Initalize the motors plugged into ports A and B
+motors = MotorPair('A', 'B')
+
+# Set the default speed to 75%
+motors.set_default_speed(75)
+
+# Drive forward 30cm
+motors.move(30, 'cm')
+
+wait_for_seconds(2)
+
+# Drive backwards 30cm and steer right
+motors.move(-30, 'cm', 50)
+
+wait_for_seconds(2)
+
+# Start the motors
+motors.start()
+
+wait_for_seconds(3)
+
+# Stop the motors
+motors.stop()
+</code></pre>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.74e28a9f.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.220ee61c.min.js"></script>
+      
+    
+  </body>
+</html>
